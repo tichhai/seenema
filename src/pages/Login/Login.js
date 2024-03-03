@@ -120,7 +120,7 @@ export default function Login(props) {
           <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
             {t("Bạn chưa có tài khoản")} ?{" "}
             <NavLink
-              to="register"
+              to="/register"
               className="cursor-pointer text-indigo-600 hover:text-indigo-800"
             >
               {t("Đăng ký")}

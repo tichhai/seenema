@@ -6,17 +6,17 @@ import { Tabs, Rate } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { layThongTinChiTietPhim } from "../../redux/actions/QuanLyRapActions";
 import moment from "moment";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { USER_LOGIN } from "../../util/settings/config";
 
 const { TabPane } = Tabs;
 
 export default function Detail(props) {
   const filmDetail = useSelector((state) => state.QuanLyPhimReducer.filmDetail);
   const { t } = useTranslation();
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-
   useEffect(() => {
     //Lấy thông tin param từ url
     let id = props.id;
@@ -150,7 +150,11 @@ export default function Detail(props) {
                                   .map((lichChieu, index) => {
                                     return (
                                       <NavLink
-                                        to={`/checkout/${lichChieu.maLichChieu}`}
+                                        to={
+                                          localStorage.getItem(USER_LOGIN)
+                                            ? `/checkout/${lichChieu.maLichChieu}`
+                                            : `/login`
+                                        }
                                         key={index}
                                         className="col-span-1 text-green-800 font-bold"
                                       >

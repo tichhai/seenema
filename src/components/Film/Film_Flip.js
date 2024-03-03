@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { PlayCircleOutlined } from "@ant-design/icons";
 import "./Film_Flip.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Modal } from "antd";
+import ReactPlayer from "react-player/youtube";
 
 export default function Film_Flip(props) {
   const { item } = props;
   const navigate = useNavigate();
   const { t } = useTranslation();
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
   return (
     <div className="flip-card mt-2">
-      <div className="flip-card-inner">
+      <Modal
+        onCancel={() => {
+          setIsModalOpen(false);
+        }}
+        open={isModalOpen}
+        footer=""
+        width={600}
+        styles={{ height: 400 }}
+      >
+        <ReactPlayer
+          width={"100%"}
+          url={
+            item.trailer
+              ? item.trailer
+              : `https://youtu.be/EX6clvId19s?si=GGjnPLaJkwQYCvHf`
+          }
+        />
+      </Modal>
+      <div
+        className="flip-card-inner"
+        onClick={() => {
+          console.log(item);
+          showModal();
+        }}
+      >
         <div className="flip-card-front">
           <img
             src={item.hinhAnh}
