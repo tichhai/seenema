@@ -179,8 +179,12 @@ export default function Home(props) {
               }
             >
               <Meta
-                title="PROMISING YOUNG WOMAN | Bông hồng nước Anh Carey Mulligan và màn trả thù..."
-                description="Đề cử giải Oscar danh giá vừa gọi tên Carey Mulligan ở hạng mục nữ chính xuất sắc nhất ..."
+                title={t(
+                  "PROMISING YOUNG WOMAN | Bông hồng nước Anh Carey Mulligan và màn trả thù..."
+                )}
+                description={t(
+                  "Đề cử giải Oscar danh giá vừa gọi tên Carey Mulligan ở hạng mục nữ chính xuất sắc nhất ..."
+                )}
               />
             </Card>
           </a>
@@ -197,8 +201,12 @@ export default function Home(props) {
               }
             >
               <Meta
-                title="VỪA ĐẸP LẠI VỪA TÀI NĂNG, DÀN SAO NAM CỦA PHIM “BÀN TAY DIỆT QUỶ"
-                description="Quy tụ 3 nam tài tử vừa điển trai, vừa được đánh giá cao về năng lực diễn xuất là Park Seo Joon, ..."
+                title={t(
+                  "VỪA ĐẸP LẠI VỪA TÀI NĂNG, DÀN SAO NAM CỦA PHIM “BÀN TAY DIỆT QUỶ"
+                )}
+                description={t(
+                  "Quy tụ 3 nam tài tử vừa điển trai, vừa được đánh giá cao về năng lực diễn xuất là Park Seo Joon, ..."
+                )}
               />
             </Card>
           </a>
@@ -212,7 +220,7 @@ export default function Home(props) {
               width={70}
             />
             <p className="ml-2">
-              Khai trương rạp xịn giá ngon, chuẩn xì-tai Sài Gòn
+              {t("Khai trương rạp xịn giá ngon, chuẩn xì-tai Sài Gòn")}
             </p>
           </a>
           <a className="flex mt-2" href="https://vnexpress.net/">
@@ -223,7 +231,7 @@ export default function Home(props) {
               width={70}
             />
             <p className="ml-2">
-              “Bóc tem” tổ hợp giải trí mới toanh của giới Hà Thành
+              {t("Bóc tem tổ hợp giải trí mới toanh của giới Hà Thành")}
             </p>
           </a>
           <a className="flex mt-2" href="https://vnexpress.net/">
@@ -234,7 +242,9 @@ export default function Home(props) {
               width={70}
             />
             <p className="ml-2">
-              Tiệc Trăng Máu chính thức cán mốc 100 tỷ chỉ sau 2 tuần công chiếu
+              {t(
+                "Tiệc Trăng Máu chính thức cán mốc 100 tỷ chỉ sau 2 tuần công chiếu"
+              )}
             </p>
           </a>
           <a className="flex mt-2" href="https://vnexpress.net/">
@@ -244,7 +254,9 @@ export default function Home(props) {
               height={70}
               width={70}
             />
-            <p className="ml-2">NGÔ THANH VÂN CHÍNH THỨC KHỞI ĐỘNG CUỘC THI</p>
+            <p className="ml-2">
+              {t("NGÔ THANH VÂN CHÍNH THỨC KHỞI ĐỘNG CUỘC THI")}
+            </p>
           </a>
         </div>
       </div>

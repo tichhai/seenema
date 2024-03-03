@@ -55,9 +55,9 @@ export default function Detail(props) {
                   {moment(filmDetail.ngayKhoiChieu).format("DD.MM.YYYY")}
                 </p>
                 <br />
-                <p className="text-2xl leading-3">{t(filmDetail.tenPhim)}</p>
+                <p className="text-2xl leading-3">{filmDetail.tenPhim}</p>
                 <br />
-                <p>{t(filmDetail.moTa)}</p>
+                <p>{filmDetail.moTa}</p>
               </div>
             </div>
           </div>
