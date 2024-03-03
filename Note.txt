@@ -1,0 +1,66 @@
+Header thẻ NavLink activeClass ? -> Link 
+mấy thẻ của antd coi lại nếu ko work
+container trong file config taildwind ?
+redux thunk thay vì dispatch 1 object action thì sẽ dispatch 1 function trả về 1 object
+
+dispatch({
+    type:"",
+    data:"",
+})
+
+action = async (dispatch) => {
+    try{
+        let result = await axios({url:"",method:""})
+        dispatch({
+            type:"",
+            data:result,
+        })
+    }catch(err){}
+}
+dispatch(action)
+
+=> tách action, axios ra
+export const CarouselAction = async (dispatch) => {
+    try{
+        let result = await axios({url:"",method:""})
+        dispatch({
+            type:"",
+            data:result,
+        })
+    }catch(err){}
+}
+=> ở file cần xài, import action vào
+dispatch(CarouselAction)
+
+-> nếu muốn gắn tham số vào CarouselAction (để gán vào axios)
+
+export const CarouselAction = (thamSo) => {
+        return async (dispatch) => {
+            try{
+                let result = await axios({url:"",method:""})
+                dispatch({
+                    type:"",
+                    data:result,
+                })
+            }catch(err){}
+        }
+}
+
+dispatch(CarouselAction(thamSo))
+
+redux thunk cho phép dispatch 1 function -> kiểm tra redux toolkit cho xài ko 
+
+trang detail xài useParams để lấy id (xem lại index.js và jiraTemplate)
+
+cách dùng sass trong react ? file circle.sass -> sử dụng sass coi được ko (đã cài)
+
+Redirect trong checkoutTemplate ?
+Suspend, lazy App.js ?
+useFormik ?
+history goBack trong dangNhapAction ? -> useNavigate/ history
+useParams trong checkout x4
+
+getState trong quanlydatveAction cua redux thunk de lay du lieu tu store khac
+debounce search chuc nang search
+
+navigate("/admin/films") ? 
