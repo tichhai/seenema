@@ -17,7 +17,7 @@ import {
 
 const { Search } = Input;
 
-export default function Films() {
+export default function Dashboard() {
   const { danhSachNguoiDung } = useSelector(
     (state) => state.QuanLyNguoiDungReducer
   );

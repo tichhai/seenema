@@ -122,7 +122,7 @@ export default function Header(props) {
             </Option>
           </Select>
         </div>
-        <button className="p-4 lg:hidden">
+        <button className="p-4 lg:hidden" onClick={() => console.log(1)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
